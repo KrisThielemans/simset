@@ -61,28 +61,35 @@ OBJ_DIR = $(SIMSET_PATH_USR)/obj
 PROGRAMS = $(SIMSET_PATH_USR)/bin
 
 
-# Use this to detect the OS
-# Note: it will fail on Windows (outside of WSL), which will just leave the various empty
-UNAME := $(shell uname)
-
-# Set OS Flags; all Unix systems should set GEN_UNIX, so that's what we fall back to.
+# Set OS Flags; all Unix systems should set GEN_UNIX.
+# Choose one of the following for CFLAGS:
+# (Below we provide sample flags for Alphas, Macintoshes using OSX, and Linux.
 # These flags will depend on the system environment--even if you have a listed 
 # OS you may need to add/change flags.  If you can provide flags for another 
 # operating system, we would be most grateful.)
 
+# SUN_OS
+# SGI_OS
+# SGI64_OS
+
 # ALPHA_OS
-# Suggested compiler flags for ALPHA (not sure how to detect it)
+# Suggested compiler flags for ALPHA
 # OS_CFLAGS = -DGEN_UNIX -DALPHA_OS -g -std1 -fptm su
 
-ifeq ($(UNAME), Darwin)
-    # Suggested compiler flags for Macintosh Unix (Darwin)
-    OS_CFLAGS = -DDARWIN -g
-else
-    # ifeq ($(UNAME), Linux)
-    # Suggested compiler flags for LINUX
-    OS_CFLAGS = -DGEN_UNIX -DLINUX
-endif
+# DEC_ULTRIX
+# DGUX
+# MPW
+# _MWERKS_
+# RS6000 (IBM)
+# HP_OS
+# WINNT
 
+# Suggested compiler flags for Macintosh Unix (Darwin)
+OS_CFLAGS = -DDARWIN -g
+
+# LINUX
+# Suggested compiler flags for LINUX
+# OS_CFLAGS = -DGEN_UNIX -DLINUX
 
 
 COMPILER = cc

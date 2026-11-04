@@ -6,7 +6,6 @@
 #
 # THIS SHELL SCRIPT SHOULD BE EXECUTED FROM WITHIN THE SimSET DIRECTORY
 
-SIMSET_PATH=`pwd`
 # Check for spaces in the SimSET directory path
 dirspc=`pwd | grep ' '` 
 # echo $dirspc
@@ -19,18 +18,11 @@ fi
 # Remove any current object files
 rm -f obj/*.o
 
-# exit on error
-set -e
-
-# create output directories
-mkdir -p obj
-mkdir -p bin
-
 # Change working directory to make.files
 cd make.files
 
 # Make SimSET in full
-make -f simset.make SIMSET_PATH=$SIMSET_PATH
+make -f simset.make
 
 # Go into bin and create links
 cd ../bin

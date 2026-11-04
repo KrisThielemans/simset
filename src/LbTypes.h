@@ -2,9 +2,9 @@
 *																				*
 *                       Source code developed by the							*
 *            Imaging Research Laboratory - University of Washington				*
-*                (C) Copyright 1992-2026 Department of Radiology				*
+*                (C) Copyright 1992-2013 Department of Radiology				*
 *                         University of Washington								*
-*                            MIT License										*
+*                            All Rights Reserved								*
 *																				*
 *********************************************************************************/
 
@@ -37,19 +37,8 @@
 *
 *     Revision date:		
 *
-*     Revision description: 
+*     Revision description:
 *
-**********************************************************************************
-*
-*     Revision Section (Also update version number, if relevant)
-*
-*     Programmer(s): Darrin Byrd
-*
-*     Revision date:  27 October 2026
-*
-*     Revision description: LB_TYPE_USE_SYS_INTS set by default (instead of commented out)
-*
-
 **********************************************************************************
 *
 *     Revision Section (Also update version number, if relevant)
@@ -88,7 +77,7 @@
 
 /* Define this value if your system has the file /usr/include/sys/types.h
     (otherwise comment out the following line).  */
- #define LB_TYPE_USE_SYS_INTS 
+/* #define LB_TYPE_USE_SYS_INTS */
 
 
 #include <float.h>

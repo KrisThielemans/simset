@@ -4,7 +4,7 @@
 *           Imaging Research Laboratory - University of Washington               *
 *               (C) Copyright 1995-2013 Department of Radiology                  *
 *                           University of Washington                             *
-*                              MIT License		                                 *
+*                              All Rights Reserved                               *
 *                                                                                *
 *********************************************************************************/
  
